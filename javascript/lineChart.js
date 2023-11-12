@@ -37,7 +37,7 @@ const drawLineChart = () => {
     // define y-axis
     var yAxis = d3.scaleLinear()
     .range([(height-margin.bottom), (margin.top)])
-    .domain([0 , 60]);
+    .domain([18 , 30]);
 
     // draw y-axis
     svg.append('g')
