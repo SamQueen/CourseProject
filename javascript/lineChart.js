@@ -50,7 +50,7 @@ const drawLineChart = () => {
     .datum(data)
     .attr('fill', 'none')
     .attr('stroke', 'red')
-    .attr('stroke-width', 1.5)
+    .attr('stroke-width', 3)
     .attr('d', d3.line()
         .x(function(d) { return xAxis(d.year) })
         .y(function(d) { return yAxis(d.average) })
@@ -62,7 +62,7 @@ const parseData = () => {
     var map = new Map();
 
     displayData.map((item) => {
-        if (item.Name === 'Nitrogen dioxide (NO2)' && item.Geo_Place_Name == 'East New York') {
+        if (item.Name === 'Nitrogen dioxide (NO2)' && item.Geo_Place_Name == 'Greenpoint') {
             // add a year attribute
             var str = item.Start_Date;
             year = str.substr(str.length - 4);
